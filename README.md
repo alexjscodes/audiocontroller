@@ -1,4 +1,5 @@
 # Simple Audio Controller
+## NOTE: You must have Node.JS for this to run!
 This application is a simple web-socket/web server that will let you control your computer's audio basically through IP. The project will get more modern soon, as this is just a little thing I made to control my speakers when I'm away from the PC.
 ## Install Guide
 First, download this repository as a ZIP file. Before you extract it, initialize your Node.JS project. Go in the directory you will be working on and execute this in your terminal.
@@ -20,6 +21,14 @@ When you have done that, you should be able to go to `localhost:1010` and see th
 
 Just a basic slider and text that shows the current volume.
 
+## Background Service (WINDOWS ONLY)
+The audio controller doesn't turn itself into a background service automatically, but you can do it by using [nssm](https://nssm.cc/release/nssm-2.24.zip) (the Non-Sucking Service Manager). Put that ZIP file in the root of your Windows drive, and extract it, then go into the directory and the directory in there has a `win32` and `win64` folder in there. Whichever one your computer uses, go into that folder. Then open Command Prompt in that directory and do:
+```
+nssm install audiocontroller
+```
+
+Once you've executed that, a GUI should pop up. In `Path`, click the three dots and go to your Node.JS installation directory and choose `node.exe`. In `Startup directory`, put it in the `audiocontroller` folder where all of the project files. Last one, in `Arguments`, put `index.js`. What this does is it will be in the working directory, and run the `index.js` file with the `node.exe` executeable you provided it. It will do that as a service on your Windows Machine. If you want to uninstall the service, just go into the nssm folder and in Command Prompt you want to execute, `nssm remove audiocontroller confirm`. There are plenty of other apps that can do this, but `nssm` is the one I mostly use for background services. If you have questions about this, look below.
+
 ## Questions?
 
-If you have questions about this, you can DM me on Discord `@alex.codes`
+If you have questions about this repository or any of the guides, you can DM me on Discord `@alex.codes`
