@@ -1,0 +1,20 @@
+{
+  "name": "audiocontroller",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "loudness": "^0.4.2",
+    "node-windows": "^1.0.0-beta.8",
+    "win-audio": "^3.0.3",
+    "ws": "^8.18.0"
+  }
+}
