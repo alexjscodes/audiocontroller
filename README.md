@@ -9,7 +9,7 @@ npm init
 Call the project whatever you want, after that, extract the ZIP file from this repository and put all the files in your working directory.
 Once you've done that, you will want to install the packages that are required from the server.
 ```
-npm install express loudness ws
+npm install express loudness ws ejs
 ```
 And now, it is ready to be fired up. So run the project by doing:
 ```
